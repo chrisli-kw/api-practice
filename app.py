@@ -1,4 +1,5 @@
 from flask import Flask, request
+from core.config import PORT
 from core.utils import CheckData, ConvertData
 
 
@@ -38,4 +39,4 @@ def order():
 
 
 if __name__ == "__main__":
-    app.run('0.0.0.0', port=8080)
+    app.run('0.0.0.0', port=PORT)

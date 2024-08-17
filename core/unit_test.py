@@ -2,6 +2,7 @@ import os
 import logging
 import requests
 from logging.handlers import RotatingFileHandler
+from config import HOST, PORT
 
 
 if not os.path.exists('./log'):
@@ -34,7 +35,7 @@ def get_data():
 
 
 def tester():
-    url = 'http://127.0.0.1:8080/api/orders'
+    url = f'http://{HOST}:{PORT}/api/orders'
 
     data = get_data()
     logging.info(f"Post to the API with accurate data")
